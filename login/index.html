@@ -7799,7 +7799,7 @@
             if (!badge) return;
 
             try {
-                const securityRes = await fetch('https://cdn.argust.my.id/sap/data/security.json?t=' + Date.now()).then(r => r.json()).catch(() => null);
+                const securityRes = await fetch('https://cdn.argust.my.id/data/security.json?t=' + Date.now()).then(r => r.json()).catch(() => null);
                 const isValid = await verifyLicenseFromSecurity(securityRes, domain, appData.siteConfig?.license);
                 if (isValid) {
                     badge.className = "inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-500 border border-emerald-500/20";
